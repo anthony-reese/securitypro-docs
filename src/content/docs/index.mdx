@@ -1,36 +1,31 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: Welcome to SecurityPro Docs
+description: Comprehensive guides and documentation to help you start working with SecurityPro as quickly as possible.
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  title: SecurityPro Documentation
+  tagline: Everything you need to integrate and use SecurityPro APIs.
   actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+    - text: Get Started
+      link: /authentication
+      icon: rocket
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Explore the Docs
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+<CardGrid>
+  <Card title="Authentication" icon="lock">
+    Learn how to authenticate and secure your API requests.
+  </Card>
+  <Card title="API Endpoints" icon="api">
+    Discover the available API endpoints and their usage.
+  </Card>
+  <Card title="Code Examples" icon="code">
+    Practical examples to get you started quickly.
+  </Card>
+  <Card title="Rate Limits" icon="speed">
+    Understand our rate limiting policies to optimize your integration.
+  </Card>
 </CardGrid>

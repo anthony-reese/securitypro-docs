@@ -1,54 +1,59 @@
-# Starlight Starter Kit: Basics
+# SecurityPro Docs
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+**SecurityPro Docs** is a developer documentation site for the SecurityPro API. The documentation provides guides, reference materials, and code examples to help developers integrate authentication, webhooks, rate limits, and more.
 
+Built with [Astro Starlight](https://docs.astro.build/en/guides/starlight/), the site supports dark/light mode, sidebar navigation, and Markdown content management.
+
+## Features
+
+- Clean and responsive design
+- Dark/light mode toggle
+- Sidebar with grouped sections
+- Search functionality
+- Markdown-based content
+- Easy deployment with Netlify or GitHub Pages
+
+## Project Structure
 ```
-npm create astro@latest -- --template starlight
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
-.
-├── public/
+securitypro-docs/
 ├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   └── content.config.ts
+│ └── content/docs/
+│ ├── authentication.md
+│ ├── endpoints.md
+│ ├── examples.md
+│ ├── rate-limits.md
+│ ├── errors.md
+│ ├── webhooks.md
+│ └── reference/
+├── public/
 ├── astro.config.mjs
 ├── package.json
-└── tsconfig.json
+└── README.md
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## Installation
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+```bash
+npm install
+```
+## Development
 
-Static assets, like favicons, can be placed in the `public/` directory.
+```bash
+npm run dev
+```
 
-## 🧞 Commands
+Visit `http://localhost:4321` to view locally.
 
-All commands are run from the root of the project, from a terminal:
+## Deploy
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Deploy to Netlify or GitHub Pages. You can configure the base site URL in `astro.config.mjs`.
 
-## 👀 Want to learn more?
+Example:
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+```ts
+site: 'https://securitypro-docs.netlify.app',
+```
+
+## License
+
+[MIT](https://mit-license.org)

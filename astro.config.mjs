@@ -2,22 +2,32 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// https://astro.build/config
+// https://securitypro-docs.netlify.app
 export default defineConfig({
+	site: 'https://securitypro-docs.netlify.app',
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'SecurityPro Docs',
+			social: [{ icon: 'netlify', label: 'Netlify', href: 'https://securitypro-docs.netlify.app' }],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Getting Started',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Authentication', link: '/authentication' },
+            			{ label: 'API Endpoints Overview', link: '/endpoints' },
+            			{ label: 'Code Examples', link: '/examples' },
+            			{ label: 'Rate Limits', link: '/rate-limits' },
+						{ label: 'Error Handling', link: '/errors' },
 					],
 				},
 				{
-					label: 'Reference',
+					label: 'Advanced',
+					items: [
+      					{ label: 'Webhooks', link: '/webhooks' },
+					],
+				},
+				{
+					label: 'API Reference',
 					autogenerate: { directory: 'reference' },
 				},
 			],
