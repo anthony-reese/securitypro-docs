@@ -17,6 +17,7 @@ export default defineConfig({
             			{ label: 'API Endpoints Overview', link: '/endpoints' },
             			{ label: 'Code Examples', link: '/examples' },
             			{ label: 'Rate Limits', link: '/rate-limits' },
+						{ label: 'Sample Responses', link: '/responses' },
 						{ label: 'Error Handling', link: '/errors' },
 					],
 				},
