@@ -1,6 +1,9 @@
 ---
 title: Rate Limits
-description: Understand the rate limiting policies.
+description: Limits, headers, and backoff strategies.
+sidebar:
+  label: Rate Limits
+  order: 12
 ---
 
 To ensure fair usage, the API enforces the following rate limits:

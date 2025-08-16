@@ -7,25 +7,42 @@ hero:
   tagline: Everything you need to integrate and use SecurityPro APIs.
   actions:
     - text: Get Started
-      link: /authentication
+      link: /concepts/authentication
       icon: rocket
+sidebar:
+  label: Overview
+  order: 1
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import { gettingStarted, guides, reference } from '../../data/sidebar.js';
 
-## Explore the Docs
-
+## Getting Started
 <CardGrid>
-  <Card title="Authentication" icon="lock">
-    Learn how to authenticate and secure your API requests.
-  </Card>
-  <Card title="API Endpoints" icon="api">
-    Discover the available API endpoints and their usage.
-  </Card>
-  <Card title="Code Examples" icon="code">
-    Practical examples to get you started quickly.
-  </Card>
-  <Card title="Rate Limits" icon="speed">
-    Understand our rate limiting policies to optimize your integration.
-  </Card>
+  {gettingStarted.map(item => (
+    <Card title={item.label} icon={item.icon} href={item.href}>
+      {item.desc}
+    </Card>
+  ))}
 </CardGrid>
+
+## Guides
+<CardGrid>
+  {guides.map(item => (
+    <Card title={item.label} icon={item.icon} href={item.href}>
+      {item.desc}
+    </Card>
+  ))}
+</CardGrid>
+
+## Reference
+<CardGrid>
+  {reference.map(item => (
+    <Card title={item.label} icon={item.icon} href={item.href}>
+      {item.desc}
+    </Card>
+  ))}
+</CardGrid>
+
+---
+

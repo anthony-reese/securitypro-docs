@@ -1,6 +1,9 @@
 ---
 title: Error Handling
-description: Understand how errors are returned by the API.
+description: Error codes, messages, and remediation steps.
+sidebar:
+  label: Error Handling
+  order: 13
 ---
 
 The API returns standard HTTP status codes along with JSON error responses.

@@ -1,6 +1,6 @@
 ---
-title: Endpoints Directory
-description: Full list of SecurityPro API endpoints.
+title: Reference Notes
+description: Additional schemas and conventions.
 ---
 
 ## Authentication

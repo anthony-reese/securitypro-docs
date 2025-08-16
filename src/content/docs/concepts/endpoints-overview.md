@@ -1,6 +1,9 @@
 ---
-title: API Endpoints
-description: Overview of available API endpoints.
+title: API Endpoints Overview
+description: Core resources and typical use-cases.
+sidebar:
+  label: API Endpoints Overview
+  order: 11
 ---
 
 ## GET /users

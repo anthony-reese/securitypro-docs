@@ -1,6 +1,9 @@
 ---
-title: Sample API Responses
-description: Realistic examples of success, error, and webhook responses from SecurityPro.
+title: Sample Responses
+description: Typical JSON/XML payloads and fields.
+sidebar:
+  label: Responses
+  order: 99
 ---
 
 Get a better understanding of what to expect from API calls.

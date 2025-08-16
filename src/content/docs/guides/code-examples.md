@@ -1,6 +1,9 @@
 ---
 title: Code Examples
-description: Practical examples of using the SecurityPro API.
+description: TypeScript and Python snippets for common tasks.
+sidebar:
+  label: Code Examples
+  order: 1
 ---
 
 ## Creating a User

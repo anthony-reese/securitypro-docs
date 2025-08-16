@@ -1,6 +1,9 @@
 ---
-title: Authentication Methods
-description: Learn how to authenticate with the SecurityPro API.
+title: Authentication
+description: API keys and OAuth 2.0 options.
+sidebar:
+  label: Authentication
+  order: 10
 ---
 
 SecurityPro API uses API keys to authenticate requests. You can obtain your API key from your dashboard.
