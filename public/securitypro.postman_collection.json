@@ -1,0 +1,86 @@
+{
+  "info": {
+    "name": "SecurityPro API",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Collection of SecurityPro REST API endpoints (balances, orders, market data).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Retrieve Balances",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "{{API_KEY}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{API_BASE}}/v1/account/balances",
+          "host": ["{{API_BASE}}"],
+          "path": ["v1", "account", "balances"]
+        }
+      }
+    },
+    {
+      "name": "Place Order",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "X-API-Key",
+            "value": "{{API_KEY}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"symbol\": \"BTC-USD\",\n  \"side\": \"buy\",\n  \"type\": \"limit\",\n  \"price\": \"45000\",\n  \"size\": \"0.01\"\n}"
+        },
+        "url": {
+          "raw": "{{API_BASE}}/v1/orders",
+          "host": ["{{API_BASE}}"],
+          "path": ["v1", "orders"]
+        }
+      }
+    },
+    {
+      "name": "Market Data (Ticker)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-Key",
+            "value": "{{API_KEY}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{API_BASE}}/v1/market/ticker?symbol=BTC-USD",
+          "host": ["{{API_BASE}}"],
+          "path": ["v1", "market", "ticker"],
+          "query": [
+            { "key": "symbol", "value": "BTC-USD" }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "API_BASE",
+      "value": "https://api.securitypro.com"
+    },
+    {
+      "key": "API_KEY",
+      "value": "<your-api-key>"
+    }
+  ]
+}

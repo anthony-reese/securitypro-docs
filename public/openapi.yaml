@@ -1,0 +1,273 @@
+openapi: 3.1.0
+
+info:
+  title: SecurityPro API
+  version: "0.1.0"
+  description: >
+    REST API for accounts, trading, and market data.
+    This is a minimal spec to power Postman/Swagger/Redoc and your docs site.
+
+servers:
+  - url: https://api.securitypro.com
+    description: Production
+  - url: https://sandbox.securitypro.com
+    description: Sandbox
+
+tags:
+  - name: Accounts
+    description: Account information and balances
+  - name: Trading
+    description: Order entry and status
+  - name: Market Data
+    description: Tickers and market information
+
+paths:
+  /v1/account/balances:
+    get:
+      tags: [Accounts]
+      summary: Retrieve account balances
+      security:
+        - ApiKeyAuth: []
+      responses:
+        "200":
+          description: List of balances
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Balance"
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+        "429":
+          $ref: "#/components/responses/RateLimitError"
+
+  /v1/orders:
+    post:
+      tags: [Trading]
+      summary: Place a new order
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OrderRequest"
+            examples:
+              marketBuy:
+                summary: Market buy 0.01 BTC
+                value:
+                  symbol: BTC-USD
+                  side: buy
+                  type: market
+                  quantity: "0.01"
+                  client_order_id: demo-123
+              limitSell:
+                summary: Limit sell
+                value:
+                  symbol: BTC-USD
+                  side: sell
+                  type: limit
+                  price: "45000"
+                  size: "0.01"
+                  time_in_force: GTC
+      responses:
+        "202":
+          description: Order accepted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OrderAccepted"
+        "200":
+          description: Order immediately filled/acknowledged
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OrderResponse"
+        "400":
+          $ref: "#/components/responses/BadRequestError"
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+        "429":
+          $ref: "#/components/responses/RateLimitError"
+
+  /v1/market/ticker:
+    get:
+      tags: [Market Data]
+      summary: Get latest ticker for a symbol
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - in: query
+          name: symbol
+          required: true
+          schema:
+            type: string
+            example: BTC-USD
+          description: Trading pair symbol
+      responses:
+        "200":
+          description: Latest ticker snapshot
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Ticker"
+        "400":
+          $ref: "#/components/responses/BadRequestError"
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+        "429":
+          $ref: "#/components/responses/RateLimitError"
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: Provide your API key in the X-API-Key header.
+
+  responses:
+    UnauthorizedError:
+      description: Missing/invalid credentials
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+    BadRequestError:
+      description: Validation or request error
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+    RateLimitError:
+      description: Too many requests
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+
+  schemas:
+    Balance:
+      type: object
+      properties:
+        asset:
+          type: string
+          example: BTC
+        available:
+          type: string
+          example: "0.05000000"
+        hold:
+          type: string
+          example: "0.01000000"
+        total:
+          type: string
+          example: "0.06000000"
+      required: [asset, available, hold, total]
+
+    OrderRequest:
+      type: object
+      properties:
+        symbol:
+          type: string
+          example: BTC-USD
+        side:
+          type: string
+          enum: [buy, sell]
+        type:
+          type: string
+          enum: [market, limit]
+        quantity:
+          type: string
+          description: Units of base asset (for market orders)
+          example: "0.01"
+        size:
+          type: string
+          description: Units of base asset (for limit orders)
+          example: "0.01"
+        price:
+          type: string
+          description: Limit price
+          example: "45000"
+        time_in_force:
+          type: string
+          enum: [GTC, IOC, FOK]
+          example: GTC
+        client_order_id:
+          type: string
+          example: demo-123
+      required: [symbol, side, type]
+
+    OrderAccepted:
+      type: object
+      properties:
+        order_id:
+          type: string
+          example: "ord_abc123"
+        status:
+          type: string
+          example: accepted
+        received_at:
+          type: string
+          format: date-time
+          example: "2025-08-17T14:25:00Z"
+      required: [order_id, status]
+
+    OrderResponse:
+      type: object
+      properties:
+        order_id:
+          type: string
+          example: "ord_abc123"
+        status:
+          type: string
+          enum: [accepted, open, partial, filled, canceled, rejected]
+          example: filled
+        filled_size:
+          type: string
+          example: "0.01"
+        avg_fill_price:
+          type: string
+          example: "44995.12"
+        client_order_id:
+          type: string
+          example: demo-123
+        created_at:
+          type: string
+          format: date-time
+      required: [order_id, status]
+
+    Ticker:
+      type: object
+      properties:
+        symbol:
+          type: string
+          example: BTC-USD
+        price:
+          type: string
+          example: "45000.12"
+        bid:
+          type: string
+          example: "44995.00"
+        ask:
+          type: string
+          example: "45005.00"
+        ts:
+          type: string
+          format: date-time
+          example: "2025-08-17T14:25:00Z"
+      required: [symbol, price, ts]
+
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+          example: invalid_api_key
+        message:
+          type: string
+          example: API key missing or invalid
+        request_id:
+          type: string
+          example: req_12345

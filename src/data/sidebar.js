@@ -13,6 +13,7 @@ export const guides = [
   { label: 'Placing Orders', href: '/guides/placing-orders', icon: 'cart', desc: '🧾 Create and submit orders via REST.' },
   { label: 'Retrieving Balances', href: '/guides/retrieving-balances', icon: 'wallet', desc: '🗂 Fetch account balances and holdings.' },
   { label: 'Real-time Price Feed', href: '/guides/realtime-price-feed', icon: 'activity', desc: '📊 Subscribe to WebSocket price streams.' },
+  { label: 'Transaction Lifecycle', href: '/guides/transaction-lifecycle', icon: 'wings', desc: '💸 Visual walkthrough of a full flow from deposit to order execution to settlement.' },
 ];
 
 export const reference = [

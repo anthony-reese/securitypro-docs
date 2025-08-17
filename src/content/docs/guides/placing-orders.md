@@ -38,3 +38,29 @@ r = requests.post(f"{API_BASE}/v1/orders",
 print(r.json())
 ```
 
+## Test Placing Orders
+
+```bash
+# Create a market order (BTC-USD)
+curl -X POST "$API_BASE/v1/orders" \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: $API_KEY" \
+  -d '{
+    "symbol": "BTC-USD",
+    "side": "buy",
+    "type": "market",
+    "quantity": "0.01",
+    "client_order_id": "demo-$(date +%s)"
+  }'
+  ```
+
+▶️ [Download Postman Collection](/securitypro.postman_collection.json)
+
+**Tip**: Replace `$API_BASE` and `$API_KEY` with your environment values. \
+Check fills with `GET /v1/orders/{order_id}` or listen for the `order.filled` webhook.
+
+### Verify
+
+- `202 Accepted` → order accepted into the matching engine  
+- `200 OK` with `{ "order_id": "...", "status": "filled" | "partial" }`  
+- Webhook `order.filled` confirms settlement flow

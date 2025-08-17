@@ -13,8 +13,9 @@ export default defineConfig({
 			sidebar: [
 				{ label: 'Getting Started', items: gettingStarted.map(({ label, href }) => ({ label, link: href })) },
 				{ label: 'Guides', items: guides.map(({ label, href }) => ({ label, link: href })) },
-				{ label: 'API Reference', autogenerate: { directory: 'reference' } },
+				{ label: 'API Reference', autogenerate: { directory: 'reference', collapsed: false } },
 			],
 		}),
 	],
+	vite: { resolve: { alias: { '@': '/src' } } },
 });
