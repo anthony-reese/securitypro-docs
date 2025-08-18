@@ -191,7 +191,15 @@ curl -X GET "$API_BASE/v1/market/ticker?symbol=BTC-USD" \
   -H "X-API-Key: $API_KEY"
 ```
 
-▶️ [Download Postman Collection](/securitypro.postman_collection.json)
+:::tip[🔗 Useful Links]
+
+<a href="/securitypro.postman_collection.json"
+   download="securitypro.postman.json"
+   class="button-link">
+  Download Postman Collection
+</a>
+
+:::
 
 **Tip**: For WS, handle heartbeats and reconnect with backoff.\
 For high-throughput feeds, batch updates before UI render.

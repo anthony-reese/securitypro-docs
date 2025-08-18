@@ -54,7 +54,15 @@ curl -X POST "$API_BASE/v1/orders" \
   }'
   ```
 
-▶️ [Download Postman Collection](/securitypro.postman_collection.json)
+:::tip[🔗 Useful Links]
+
+<a href="/securitypro.postman_collection.json"
+   download="securitypro.postman.json"
+   class="button-link">
+  Download Postman Collection
+</a>
+
+:::
 
 **Tip**: Replace `$API_BASE` and `$API_KEY` with your environment values. \
 Check fills with `GET /v1/orders/{order_id}` or listen for the `order.filled` webhook.

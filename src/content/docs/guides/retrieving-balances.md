@@ -30,7 +30,15 @@ curl -X GET "$API_BASE/v1/account/balances" \
   -H "X-API-Key: $API_KEY"
 ```
 
-▶️ [Download Postman Collection](/securitypro.postman_collection.json)
+:::tip[🔗 Useful Links]
+
+<a href="/securitypro.postman_collection.json"
+   download="securitypro.postman.json"
+   class="button-link">
+  Download Postman Collection
+</a>
+
+:::
 
 **Tip**: Expect a list of assets with `available`, `hold`, and `total`.\
 Use `X-Request-Id` in headers to trace calls in logs.
