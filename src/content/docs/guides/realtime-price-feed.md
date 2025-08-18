@@ -191,7 +191,7 @@ curl -X GET "$API_BASE/v1/market/ticker?symbol=BTC-USD" \
   -H "X-API-Key: $API_KEY"
 ```
 
-:::tip[🔗 Useful Links]
+:::tip[📥 Download]
 
 <a href="/securitypro.postman_collection.json"
    download="securitypro.postman.json"

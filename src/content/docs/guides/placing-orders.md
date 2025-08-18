@@ -54,7 +54,7 @@ curl -X POST "$API_BASE/v1/orders" \
   }'
   ```
 
-:::tip[🔗 Useful Links]
+:::tip[📥 Download]
 
 <a href="/securitypro.postman_collection.json"
    download="securitypro.postman.json"
