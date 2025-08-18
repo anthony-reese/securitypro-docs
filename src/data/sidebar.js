@@ -5,7 +5,7 @@ export const gettingStarted = [
   { label: 'Rate Limits', href: '/concepts/rate-limits', icon: 'speed', desc: 'Limits, headers, retries, backoff.' },
   { label: 'Error Handling', href: '/concepts/errors', icon: 'bug', desc: 'Interpret codes and recover safely.' },
   { label: 'Webhooks', href: '/concepts/webhooks', icon: 'bell', desc: 'Events, retries, signature verification.' },
-  { label: 'Responses', href: '/responses', icon: 'pages', desc: 'Typical JSON payloads and fields.' },
+  { label: 'Responses', href: '/concepts/responses', icon: 'pages', desc: 'Typical JSON payloads and fields.' },
 ];
 
 export const guides = [
