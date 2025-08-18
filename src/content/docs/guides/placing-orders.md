@@ -1,6 +1,6 @@
 ---
 title: Placing Orders
-description: Submit market and limit orders via REST with idempotency.
+description: This guide shows how to submit market and limit orders via REST with idempotency.
 sidebar:
   label: Placing Orders
   order: 2

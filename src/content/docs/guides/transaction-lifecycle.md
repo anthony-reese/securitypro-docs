@@ -1,6 +1,6 @@
 ---
 title: Transaction Lifecycle
-description: Visual walkthrough of a full flow from deposit to order execution to settlement.
+description: This guide illustrates the typical transaction lifecycle from deposit to order execution to settlement.
 sidebar:
   label: Transaction Lifecycle
   order: 40

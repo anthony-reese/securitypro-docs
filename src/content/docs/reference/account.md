@@ -1,6 +1,6 @@
 ---
 title: Account
-description: Account and balances endpoints.
+description: This guide explains account and balances endpoints.
 ---
 
 ### GET /v1/account/balances

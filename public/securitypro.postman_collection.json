@@ -2,7 +2,7 @@
   "info": {
     "name": "SecurityPro API",
     "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
-    "description": "Collection of SecurityPro REST API endpoints (balances, orders, market data).",
+    "description": "This collection enables quick testing of core SecurityPro API endpoints in Postman.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [

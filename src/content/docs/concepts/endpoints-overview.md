@@ -1,6 +1,6 @@
 ---
 title: API Endpoints Overview
-description: Core resources and typical use-cases.
+description: This guide introduces core resources and typical use-cases.
 sidebar:
   label: API Endpoints Overview
   order: 11

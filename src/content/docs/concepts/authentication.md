@@ -1,6 +1,6 @@
 ---
 title: Authentication
-description: API keys and OAuth 2.0 options.
+description: This guide explains API keys and OAuth 2.0 options.
 sidebar:
   label: Authentication
   order: 10

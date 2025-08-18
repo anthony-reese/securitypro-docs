@@ -1,6 +1,6 @@
 ---
 title: Retrieving Balances
-description: Fetch account balances and available funds.
+description: This guide shows how to fetch account balances and available funds.
 sidebar:
   label: Retrieving Balances
 ---

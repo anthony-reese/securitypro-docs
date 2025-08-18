@@ -3,9 +3,7 @@ openapi: 3.1.0
 info:
   title: SecurityPro API
   version: "0.1.0"
-  description: >
-    REST API for accounts, trading, and market data.
-    This is a minimal spec to power Postman/Swagger/Redoc and your docs site.
+  description: This specification provides a minimal schema for powering Postman, Swagger, Redoc, and the documentation site.
 
 servers:
   - url: https://api.securitypro.com

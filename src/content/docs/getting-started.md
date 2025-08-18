@@ -1,6 +1,6 @@
 ---
 title: Quickstart
-description: Create an API key, set environment variables, and make your first request.
+description: This guide shows how to create an API key, set environment variables, and make your first request.
 sidebar:
   label: Quickstart
   order: 2

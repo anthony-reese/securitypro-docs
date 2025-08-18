@@ -1,6 +1,6 @@
 ---
 title: Error Handling
-description: Error codes, messages, and remediation steps.
+description: This guide shows error codes, messages, and remediation steps.
 sidebar:
   label: Error Handling
   order: 13

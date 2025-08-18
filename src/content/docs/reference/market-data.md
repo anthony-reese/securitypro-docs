@@ -1,6 +1,6 @@
 ---
 title: Market Data
-description: Endpoints for tickers, order books, and recent trades.
+description: This guide provides code samples for tickers, order books, and recent trades.
 sidebar:
   label: Market Data
 ---

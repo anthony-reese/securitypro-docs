@@ -1,6 +1,6 @@
 ---
 title: Rate Limits
-description: Limits, headers, and backoff strategies.
+description: This guide outlines essential limits, headers, and backoff strategies.
 sidebar:
   label: Rate Limits
   order: 12

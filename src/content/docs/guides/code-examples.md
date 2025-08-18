@@ -1,6 +1,6 @@
 ---
 title: Code Examples
-description: TypeScript and Python snippets for common tasks.
+description: This guide provides TypeScript and Python snippets for common tasks.
 sidebar:
   label: Code Examples
   order: 1

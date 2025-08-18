@@ -1,6 +1,6 @@
 ---
 title: Reference Notes
-description: Additional schemas and conventions.
+description: This guide introduces additional schemas and conventions.
 ---
 
 ## Authentication

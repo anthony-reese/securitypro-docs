@@ -1,6 +1,6 @@
 ---
 title: Sample Responses
-description: Typical JSON/XML payloads and fields.
+description: This guide shows typical JSON/XML payloads and fields.
 sidebar:
   label: Responses
   order: 99

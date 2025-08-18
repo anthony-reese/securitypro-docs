@@ -1,6 +1,6 @@
 ---
 title: Orders
-description: Create and manage orders.
+description: This guide shows how to create and manage orders.
 ---
 
 ### POST /v1/orders

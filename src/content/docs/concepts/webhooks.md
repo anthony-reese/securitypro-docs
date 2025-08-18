@@ -1,6 +1,6 @@
 ---
 title: Webhooks
-description: Event delivery, retries, and signature verification.
+description: This guide explains event delivery, retries, and signature verification.
 sidebar:
   label: Webhooks
   order: 14
