@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import { gettingStarted, guides } from './src/data/sidebar.js';
+import linuxSidebar, { gettingStarted, guides } from './src/data/sidebar.js';
 
 // https://securitypro-docs.netlify.app
 export default defineConfig({
@@ -14,6 +14,7 @@ export default defineConfig({
 				{ label: 'Getting Started', items: gettingStarted.map(({ label, href }) => ({ label, link: href })) },
 				{ label: 'Guides', items: guides.map(({ label, href }) => ({ label, link: href })) },
 				{ label: 'API Reference', autogenerate: { directory: 'reference', collapsed: false } },
+				...linuxSidebar
 			],
 		}),
 	],
