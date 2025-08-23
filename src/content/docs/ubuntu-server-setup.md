@@ -3,13 +3,13 @@ title: "Ubuntu Server Setup"
 description: "A walkthrough for installing and configuring Ubuntu Server with essential CLI tools."
 ---
 
-# 1. Introduction
+## 1. Introduction
 
 This walkthrough will guide you through installing Ubuntu Server 22.04 in a local virtual machine and preparing the sever with essential command-line tools. By the end, you will have a basic but working Linux server environment with a simple web service running.
 
 This guide is written for developers, students, or sysadmins new to Linux who want hands-on experience with the server edition of Ubuntu in a safe, local environment. No prior Linux administration experience is required, though some familiarity with the command line will help.
 
-# 2. Prerequisites
+## 2. Prerequisites
 
 Before starting, make sure you have:
 
@@ -19,7 +19,7 @@ Before starting, make sure you have:
 
 - Basic command-line knowledge (navigating directories, running commands with `sudo`).
 
-# 3. Install Ubuntu Server
+## 3. Install Ubuntu Server
 
 1. Open your virtualization tool and create a new virtual machine. Allocate at least 2 CPU cores, 2 GB of RAM, and 20 GB of disk space.
 
@@ -40,7 +40,7 @@ Before starting, make sure you have:
         <figcaption>VirtualBox VM setup wizard showing CPU/RAM settings.</figcaption>
     </figure>
 
-# 4. Update the System
+## 4. Update the System
 
 Keeping your system up to date ensures you have the latest security patches and software.
     
@@ -68,7 +68,7 @@ Keeping your system up to date ensures you have the latest security patches and 
         <figcaption>Terminal showing successful <b>apt upgrade</b> with updated packages.</figcaption>
     </figure>
 
-# 5. Install Essential Tools
+## 5. Install Essential Tools
     
 Ubuntu Server starts with a minimal set of packages. Let’s add some common tools:
 
@@ -100,7 +100,7 @@ htop --version
     <figcaption><b>htop</b> running in terminal.</figcaption>
 </figure>
     
-# 6. Set Up a Simple Web Service
+## 6. Set Up a Simple Web Service
 
 To confirm our environment works, we’ll install nginx, a lightweight web server.
 
@@ -126,7 +126,7 @@ To confirm our environment works, we’ll install nginx, a lightweight web serve
         <figcaption>nginx service status showing active.</figcaption>
     </figure>
 
-# 7. Test the Service
+## 7. Test the Service
 
 1. From inside the VM, run:
     ```bash
@@ -144,7 +144,7 @@ You should see HTML output starting with `<html><head><title>Welcome to nginx!</
         <figcaption>nginx welcome page in browser.</figcaption>
     </figure>
 
-# 8. Next Steps
+## 8. Next Steps
 
 Congratulations! You now have a basic Ubuntu Server VM with tools and a running web service.
 
