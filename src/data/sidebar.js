@@ -25,6 +25,7 @@ export default [
     label: "Linux/CLI",
     items: [
       { label: "Ubuntu Server Setup", link: "/ubuntu-server-setup" },
+      { label: "Using curl to Test APIs", link: "/curl-user-guide" },
     ],
   },
 ];
