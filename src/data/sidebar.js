@@ -25,8 +25,9 @@ export default [
     label: "Linux/CLI",
     items: [
       { label: "Ubuntu Server Setup", link: "/ubuntu-server-setup" },
-      { label: "Using curl to Test APIs", link: "/curl-user-guide" },
-      { label: "How Ubuntu Services Are Managed with systemd", link: "/systemd-explained" },
+      { label: "Using curl for APIs", link: "/curl-user-guide" },
+      { label: "systemd Service Management", link: "/systemd-explained" },
+      { label: "apt Command Reference", link: "/apt-commands-reference" },
     ],
   },
 ];
