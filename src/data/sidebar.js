@@ -26,6 +26,7 @@ export default [
     items: [
       { label: "Ubuntu Server Setup", link: "/ubuntu-server-setup" },
       { label: "Using curl to Test APIs", link: "/curl-user-guide" },
+      { label: "How Ubuntu Services Are Managed with systemd", link: "/systemd-explained" },
     ],
   },
 ];
