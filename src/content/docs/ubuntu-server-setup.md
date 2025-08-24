@@ -1,5 +1,5 @@
 ---
-title: "Ubuntu Server Setup"
+title: "Ubuntu Server Setup & CLI Walkthrough"
 description: "A walkthrough for installing and configuring Ubuntu Server with essential CLI tools."
 ---
 
